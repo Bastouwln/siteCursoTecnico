@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+.header{
+    display: flex;
+    position:sticky;
+    background-color: #81c8ff;
+    width: auto;
+    height: 100px;
+    box-shadow: white;
+    box-shadow: 0px 10px 25px rgb(255, 255, 255);
+}
+.box1{
+    display:flex;
+    margin-top: 0px;
+    background-color: #48C75D;
+    width: auto;
+    height: 100px;
+}
+.header1{
+    display:flex;
+    gap: 10px;
+    padding: 20px;
+}
+.header2 ul{
+    margin-top: 8px;
+    font-size: 50px;
+    gap: 300px;
+    list-style: none;
+    display:flex;
+    margin-left: 30px;
+    color:#172D61;
+}
+.li-header1{
+    border-radius: 50px;
+    margin-top: 12px;
+    padding: 14px;
+    background-color: #4AB1FF;
+    font-size: 20px;
+    gap: 300px;
+     box-shadow: 0px 10px 25px lightblue;
+}
+.li-header2{
+    border-radius: 50px;
+    margin-top: 12px;
+    padding: 14px;
+    background-color: #4AB1FF;
+    font-size: 20px;
+    gap: 300px;
+    box-shadow: 0px 0px 25px lightblue;
+}
+
+@keyframes hoverli-header{
+    0%{background-color: #9ad2fd};
+    100%{background-color: lightblue};
+}
+.li-header2:hover{
+    animation-name: hoverli-header;
+    animation-duration: 2s;
+    
+    border-radius: 25px;
+    margin-top: 10px;
+    padding: 14px;
+    background-color: #9ad2fd;
+    font-size: 20px;
+    gap: 300px;
+    box-shadow: 0px 0px 25px lightblue;
+}

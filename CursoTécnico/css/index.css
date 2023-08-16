@@ -17,12 +17,35 @@
     animation-fill-mode: backwards;
 }
 
-.box1 {
-    display: flex;
+.grid-container {
+    display: grid;
     margin-top: 0px;
     background-color: #48C75D;
     width: auto;
     height: 100px;
+    color: white;
+    background-color: black;
+}
+
+.grid-item1 {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    justify-content: center;
+    background: black;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+
+.grid-item2 {
+    background-color: black;
+    justify-content: center;
+}
+
+.grid-item2 img {
+    padding: 20px;
+    width: 800px;
+    height: 740px;
 }
 
 .header1 {
@@ -73,10 +96,27 @@
     animation-timing-function: ease-in;
 }
 
+.divimg {
+    display: grid;
+    place-items: center;
+    background: green;
+}
+
+.imgtop {
+    width: 300px;
+    height: 100px;
+    position: fixed;
+    margin-top: 100px;
+}
+
+.imgtop::after {
+    opacity: 0;
+    content: hidden;
+}
+
 @keyframes header {
     from {
-        align-items: center;
-        top: 300px;
+        top: 400px;
     }
     to {
         top: 0px;

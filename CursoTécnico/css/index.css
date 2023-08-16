@@ -1,48 +1,64 @@
-*{
+* {
     padding: 0;
-    margin:0;
+    margin: 0;
 }
 
-.header{
+.header {
+    position: relative;
+    animation-duration: 3s;
+    animation-name: header;
     display: flex;
-    position:sticky;
+    position: sticky;
     background-color: #81c8ff;
     width: auto;
     height: 100px;
     box-shadow: white;
     box-shadow: 0px 10px 25px rgb(255, 255, 255);
+    animation-fill-mode: backwards;
 }
-.box1{
-    display:flex;
+
+.box1 {
+    display: flex;
     margin-top: 0px;
     background-color: #48C75D;
     width: auto;
     height: 100px;
 }
-.header1{
-    display:flex;
+
+.header1 {
+    display: flex;
     gap: 10px;
     padding: 20px;
 }
-.header2 ul{
+
+.header2 ul {
     margin-top: 8px;
     font-size: 50px;
     gap: 300px;
     list-style: none;
-    display:flex;
+    display: flex;
     margin-left: 30px;
-    color:#172D61;
+    color: #172D61;
 }
-.li-header1{
+
+.li-header1 {
+    animation-name: hoverHeaderOut;
+    animation-duration: 0.1s;
+    position: relative;
     border-radius: 50px;
     margin-top: 12px;
     padding: 14px;
     background-color: #4AB1FF;
     font-size: 20px;
     gap: 300px;
-     box-shadow: 0px 10px 25px lightblue;
+    box-shadow: 0px 10px 25px lightblue;
+    animation-fill-mode: backwards;
 }
-.li-header2{
+
+.li-header2 {
+    animation-duration: 0.1s;
+    animation-name: hoverHeaderOut;
+    position: relative;
     border-radius: 50px;
     margin-top: 12px;
     padding: 14px;
@@ -50,21 +66,72 @@
     font-size: 20px;
     gap: 300px;
     box-shadow: 0px 0px 25px lightblue;
+    animation-fill-mode: backwards;
 }
 
-@keyframes hoverli-header{
-    0%{background-color: #9ad2fd};
-    100%{background-color: lightblue};
+#header2 {
+    animation-timing-function: ease-in;
 }
-.li-header2:hover{
-    animation-name: hoverli-header;
-    animation-duration: 2s;
-    
+
+@keyframes header {
+    from {
+        align-items: center;
+        top: 300px;
+    }
+    to {
+        top: 0px;
+    }
+}
+
+@keyframes hoverHeaderOut {
+    from {
+        background-color: #9ad2fd;
+        color: white;
+        top: -2px;
+    }
+    to {
+        background-color: #4AB1FF;
+        color: black;
+        top: auto;
+    }
+}
+
+@keyframes hoverHeaderIn {
+    from {
+        background-color: #4AB1FF;
+        color: black;
+        top: auto;
+    }
+    to {
+        background-color: #9ad2fd;
+        color: white;
+        top: -2px;
+    }
+}
+
+.li-header2:hover {
+    position: relative;
+    animation-name: hoverHeaderIn;
+    animation-duration: 0.5s;
     border-radius: 25px;
     margin-top: 10px;
-    padding: 14px;
     background-color: #9ad2fd;
     font-size: 20px;
     gap: 300px;
     box-shadow: 0px 0px 25px lightblue;
+    color: white;
+    animation-fill-mode: forwards;
+}
+
+.li-header1:hover {
+    position: relative;
+    animation-name: hoverHeaderIn;
+    animation-duration: 0.5s;
+    border-radius: 25px;
+    margin-top: 10px;
+    background-color: #9ad2fd;
+    font-size: 20px;
+    gap: 300px;
+    box-shadow: 0px 0px 25px lightblue;
+    animation-fill-mode: forwards;
 }

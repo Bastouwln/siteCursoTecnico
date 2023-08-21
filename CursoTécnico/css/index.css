@@ -32,26 +32,18 @@
 .realMainCube{
     display:flex;
 }
-.mainCube1 {
-    text-align: center;
-    font-family: Baskerville;
-    font-size: 50px;
-    justify-content: center;
-    background: black;
-    grid-column: 1 / span 2;
-    grid-row: 1;
-}
 
 .mainCube2 {
+    border-radius: 300px;
+    padding: 10px;
     animation-name: mainCube2;
     animation-duration: 2s;
     position: relative;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.35);
     margin-top:800px;
 }
 
 .mainCube2 img {
-    padding: 35px;
     width: 700px;
     height: 640px;
 }
@@ -171,7 +163,7 @@
         margin-top: 800px;
     }
     to{
-        margin-top: 0px;
+        margin-top: 25px;
     }
 }
 
@@ -179,8 +171,7 @@
     animation-name: mainCube2;
     animation-duration: 2s;
     position: relative;
-    background-color: black;
-    margin-top:0px;
+    margin-top:25px;
 }
 
 .li-header2:hover {
@@ -208,4 +199,7 @@
     gap: 300px;
     box-shadow: 0px 0px 25px lightblue;
     animation-fill-mode: forwards;
+}
+.mainCube2:hover{
+    background-image: url(../img/guywithnotebook.png);
 }

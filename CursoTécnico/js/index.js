@@ -4,4 +4,8 @@ function paranaRemove() {
             parana.remove(parana);
            }
 }
+function hoverIn(){
+    a = document.getElementById = "imgwoman";
+    
+}
 paranaRemove();

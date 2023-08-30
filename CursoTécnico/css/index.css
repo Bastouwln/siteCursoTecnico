@@ -2,7 +2,11 @@
     padding: 0;
     margin: 0;
 }
-
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+/* * header */
 .header {
     position: relative;
     animation-duration: 3s;
@@ -17,41 +21,11 @@
     animation-fill-mode: backwards;
 }
 
-.mainCube{
-    font-size: 60px;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    margin-top: 0px;
-    background-color: #48C75D;
-    width: auto;
-    height: 100px;
-    color: white;
-    background-color: black;
-}
-.realMainCube{
-    display:flex;
-}
-
-.mainCube2 {
-    border-radius: 300px;
-    padding: 10px;
-    animation-name: mainCube2;
-    animation-duration: 2s;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.35);
-    margin-top:800px;
-}
-
-.mainCube2 img {
-    width: 700px;
-    height: 640px;
-}
 
 .header1 {
     display: flex;
     gap: 10px;
-    padding: 20px;
+    padding: 50px;
 }
 
 .header2 ul {
@@ -94,7 +68,100 @@
 #header2 {
     animation-timing-function: ease-in;
 }
+/*fim header*/
 
+
+/* ? curso técnico */
+/* * principais */
+.mainCube{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    stroke: black;
+    animation-name: mainCubeAppearing;
+    animation-duration: 2.0s;
+    font-size: 60px;
+    margin-top: 50px;
+    position: relative;
+    margin-top: 0px;
+    background-color: #48C75D;
+    width: auto;
+    height: 80px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.438);
+    margin-left: 3000px;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+/* ? curso técnico */
+
+
+.realMainCube{
+    display:flex;
+}
+
+.mainCube2 {
+    border-radius: 300px;
+    padding: 10px;
+    animation-name: mainCube2;
+    animation-duration: 2s;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.35);
+    margin-top:800px;
+}
+
+.mainCube2 img {
+    width: 700px;
+    height: 640px;
+}
+.mainCube2 {
+    animation-name: mainCube2;
+    animation-duration: 2s;
+    position: relative;
+    margin-top:25px;
+}
+
+
+
+/* * hover header */
+
+.li-header2:hover {
+    position: relative;
+    animation-name: hoverHeaderIn;
+    animation-duration: 0.4s;
+    border-radius: 25px;
+    margin-top: 10px;
+    background-color: #9ad2fd;
+    font-size: 25px;
+    gap: 300px;
+    box-shadow: 0px 0px 25px lightblue;
+    color: white;
+    animation-fill-mode: forwards;
+}
+
+.li-header1:hover {
+    padding: 30px;
+    position: relative;
+    animation-name: hoverHeaderIn;
+    animation-duration: 0.4s;
+    margin-top: 10px;
+    background-color: #9ad2fd;
+    font-size: 25px;
+    gap: 300px;
+    box-shadow: 0px 0px 25px lightblue;
+    animation-fill-mode: forwards;
+}
+
+
+
+/* * hover principais */
+.mainCube2:hover{
+    background-image: url(../img/guywithnotebook.png);
+}
+
+
+
+
+/* * imagens */
 .divimg {
     display: grid;
     place-items: center;
@@ -109,9 +176,18 @@
     margin-top: 100px;
 }
 
-.imgtop::after {
-    opacity: 0;
-    content: hidden;
+
+
+
+/* ! keyframes abaixo */
+
+@keyframes mainCubeAppearing{
+    from {
+        margin-left: 3000px;
+    }
+    to {
+        margin-left: 0px;
+    }
 }
 
 @keyframes header {
@@ -165,41 +241,4 @@
     to{
         margin-top: 25px;
     }
-}
-
-.mainCube2 {
-    animation-name: mainCube2;
-    animation-duration: 2s;
-    position: relative;
-    margin-top:25px;
-}
-
-.li-header2:hover {
-    position: relative;
-    animation-name: hoverHeaderIn;
-    animation-duration: 0.4s;
-    border-radius: 25px;
-    margin-top: 10px;
-    background-color: #9ad2fd;
-    font-size: 25px;
-    gap: 300px;
-    box-shadow: 0px 0px 25px lightblue;
-    color: white;
-    animation-fill-mode: forwards;
-}
-
-.li-header1:hover {
-    padding: 30px;
-    position: relative;
-    animation-name: hoverHeaderIn;
-    animation-duration: 0.4s;
-    margin-top: 10px;
-    background-color: #9ad2fd;
-    font-size: 25px;
-    gap: 300px;
-    box-shadow: 0px 0px 25px lightblue;
-    animation-fill-mode: forwards;
-}
-.mainCube2:hover{
-    background-image: url(../img/guywithnotebook.png);
 }

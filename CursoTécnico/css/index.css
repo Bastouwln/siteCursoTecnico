@@ -1,244 +1,38 @@
-* {
+
+*{
     padding: 0;
     margin: 0;
+    color:white;
 }
 body{
-    overflow-y: hidden;
     overflow-x: hidden;
 }
-/* * header */
-.header {
+.header{
+    height: 100vh;
+    width: 100%;
+    padding:100px;
+    background-color: rgb(31, 30, 30);
     position: relative;
-    animation-duration: 3s;
-    animation-name: header;
-    display: flex;
-    position: sticky;
-    background-color: #81c8ff;
-    width: auto;
-    height: 150px;
-    box-shadow: white;
-    box-shadow: 0px 10px 25px rgb(255, 255, 255);
-    animation-fill-mode: backwards;
+    user-select: none;
+    cursor: pointer;
 }
-
-
-.header1 {
-    display: flex;
-    gap: 10px;
-    padding: 50px;
+.header img{
+    margin-left: 100px;
 }
-
-.header2 ul {
-    margin-top: 8px;
-    font-size: 50px;
-    gap: 300px;
-    list-style: none;
-    display: flex;
-    margin-left: 30px;
-    color: #172D61;
-}
-
-.li-header1 {
-    margin-left: 50px;
-    animation-name: hoverHeaderOut;
-    animation-duration: 0.5s;
-    position: relative;
-    border-radius: 50px;
-    margin-top: 35px;
-    background-color: #4AB1FF;
-    font-size: 25px;
-    gap: 300px;
-    box-shadow: 0px 10px 25px lightblue;
-    animation-fill-mode: forwards;
-}
-
-.li-header2 {
-    animation-duration: 0.5s;
-    animation-name: hoverHeaderOut;
-    position: relative;
-    border-radius: 50px;
-    margin-top: 35px;
-    background-color: #4AB1FF;
-    font-size: 25px;
-    gap: 300px;
-    box-shadow: 0px 0px 25px lightblue;
-    animation-fill-mode: forwards;
-}
-
-#header2 {
-    animation-timing-function: ease-in;
-}
-/*fim header*/
-
-
-/* ? curso técnico */
-/* * principais */
-.mainCube{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
-    stroke: black;
-    animation-name: mainCubeAppearing;
-    animation-duration: 2.0s;
-    font-size: 60px;
-    margin-top: 50px;
-    position: relative;
-    margin-top: 0px;
-    background-color: #48C75D;
-    width: auto;
-    height: 80px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.438);
-    margin-left: 3000px;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-}
-/* ? curso técnico */
-
-
-.realMainCube{
+.header2{
     display:flex;
+    flex-direction: column;
 }
-
-.mainCube2 {
-    border-radius: 300px;
-    padding: 10px;
-    animation-name: mainCube2;
-    animation-duration: 2s;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.35);
-    margin-top:800px;
-}
-
-.mainCube2 img {
-    width: 700px;
-    height: 640px;
-}
-.mainCube2 {
-    animation-name: mainCube2;
-    animation-duration: 2s;
-    position: relative;
-    margin-top:25px;
-}
-
-
-
-/* * hover header */
-
-.li-header2:hover {
-    position: relative;
-    animation-name: hoverHeaderIn;
-    animation-duration: 0.4s;
-    border-radius: 25px;
-    margin-top: 10px;
-    background-color: #9ad2fd;
-    font-size: 25px;
-    gap: 300px;
-    box-shadow: 0px 0px 25px lightblue;
-    color: white;
-    animation-fill-mode: forwards;
-}
-
-.li-header1:hover {
-    padding: 30px;
-    position: relative;
-    animation-name: hoverHeaderIn;
-    animation-duration: 0.4s;
-    margin-top: 10px;
-    background-color: #9ad2fd;
-    font-size: 25px;
-    gap: 300px;
-    box-shadow: 0px 0px 25px lightblue;
-    animation-fill-mode: forwards;
-}
-
-
-
-/* * hover principais */
-.mainCube2:hover{
-    background-image: url(../img/guywithnotebook.png);
-}
-
-
-
-
-/* * imagens */
-.divimg {
-    display: grid;
-    place-items: center;
-    background: green;
-}
-
-.imgtop {
+.header ul{
+    margin-left: -150px;
+    display: flex;
     padding: 100px;
-    width: 300px;
-    height: 200px;
-    position: fixed;
-    margin-top: 100px;
+}
+.header li{
+    border-radius: 2px;
+    background-color: black;
+    padding: 200px;
+    text-decoration: none;
+    list-style: none;
 }
 
-
-
-
-/* ! keyframes abaixo */
-
-@keyframes mainCubeAppearing{
-    from {
-        margin-left: 3000px;
-    }
-    to {
-        margin-left: 0px;
-    }
-}
-
-@keyframes header {
-    from {
-        top: 400px;
-    }
-    to {
-        top: 0px;
-    }
-}
-
-@keyframes hoverHeaderOut {
-    from {
-        background-color:#9ad2fd;
-        color: rgb(255, 255, 255);
-        border-radius: 25px;
-        padding: 35px;
-        margin-top:10px;
-    }
-    to {
-        top:auto;
-        background-color: #4AB1FF;
-        color: black;
-        border-radius: 50px;
-        padding: 25px;
-    }
-}
-
-@keyframes hoverHeaderIn {
-    from {
-        background-color: #4AB1FF;
-        color: black;
-        top: auto;
-        padding: 25px;
-        border-radius: 50px;
-        margin-top: 35px;
-    }
-    to {
-        border-radius: 25px;
-        padding: 35px;
-        background-color: #9ad2fd;
-        color: white;
-        top: 0px;
-    }
-}
-
-@keyframes mainCube2{
-    from{
-        margin-top: 800px;
-    }
-    to{
-        margin-top: 25px;
-    }
-}

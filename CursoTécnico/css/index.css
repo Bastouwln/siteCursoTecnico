@@ -24,15 +24,18 @@ body{
     flex-direction: column;
 }
 .header ul{
+    border-radius: 20%;
+    background-color: rgb(0, 0, 0);
     margin-left: -150px;
     display: flex;
+    gap:20px;
     padding: 100px;
 }
 .header li{
+    margin-left: -10px;
     border-radius: 2px;
-    background-color: black;
+    background-color: rgb(83, 83, 83);
     padding: 200px;
     text-decoration: none;
     list-style: none;
 }
-

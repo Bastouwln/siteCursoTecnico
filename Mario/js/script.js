@@ -6,10 +6,12 @@ const gameOver = document.querySelector('.game-over');
 const restartButton = document.querySelector('.restart');
 
 const jump = () =>{
+
     mario.classList.add('jump');
+
     setTimeout(() =>{
         mario.classList.remove('jump');
-    }, 500);
+    }, 1000);
 }
 
 const loop = setInterval(() => {
@@ -17,7 +19,7 @@ const loop = setInterval(() => {
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     const cloudPosition = +window.getComputedStyle(cloud).left.replace('px', '');
 
-    if(pipePosition <= 100 && pipePosition < 60){
+    if(pipePosition <= 100 && pipePosition > 0 && marioPosition < 60){
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
 
@@ -32,14 +34,14 @@ const loop = setInterval(() => {
         cloud.style.left = `${cloudPosition}px`
 
         gameOver.style.visibility = 'visible';
-        clearInterval(lopp);
+        clearInterval(loop);
     }
-}, 10)
+}, 10);
 
 const restart = () =>{
     gameOver.style.visibility = 'hidden';
 
-    pipe.style.animation = 'pipe-animations 1,5s infinite linear';
+    pipe.style.animation = 'pipe-animations 1.5s infinite linear';
     pipe.style.left = ``;
 
     mario.src = 'assets/img/mario.gif';
@@ -66,14 +68,14 @@ const restart = () =>{
             mario.style.width = '70px';
             mario.style.marginLeft = '35px';
 
-            cloud.style.animation = 'cliud 20s infinite linear';
+            cloud.style.animation = 'cloud 20s infinite linear';
             cloud.style.left = `${cloudPosition}px`
 
             gameOver.style.visibility = 'visible';
 
             clearInterval(loop);
         }
-    }, 10)
+    }, 10);
 }
 
 document.addEventListener('keydown', jump);

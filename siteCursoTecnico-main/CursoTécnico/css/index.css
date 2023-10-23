@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.topcube{
+    background-color: black;
+    height: 100px;
+    width: auto;
+}
+.middleContainer{
+    display:flex;
+    height: 500px;
+    text-align: center;
+}
+.middleBlock1{
+    background-color: red;
+    width: 100%;
+}
+.middleBlock2{
+    background-color: blue;
+    width: 100%;
+}
+.middleBlockContainer{
+    width: 100%;
+    height: 100px;
+}
+.middleContainer1{
+    background-color: wheat;
+    width: 100%;
+    height: 200px;
+}
+.middleContainer2{
+    background-color: aqua;
+    width: auto;
+    height: 100%;
+}
